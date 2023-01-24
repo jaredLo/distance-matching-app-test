@@ -3,8 +3,6 @@ namespace my_first_app.Models
 {
    public class Cat : Animal
     {
-
-
         public void Meow()
         {
             Console.WriteLine("Meow Meow!");

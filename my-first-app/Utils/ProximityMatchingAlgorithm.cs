@@ -28,7 +28,7 @@ namespace my_first_app.Utils
 
         private double DistanceBetweenUsers(User user1, User user2)
         {
-            // Use the Haversine formula to calculate the distance between two GPS coordinates
+            // Using the Haversine formula to calculate the distance between two GPS coordinates
             var lat1 = user1.Latitude;
             var lon1 = user1.Longitude;
             var lat2 = user2.Latitude;
@@ -41,6 +41,8 @@ namespace my_first_app.Utils
                     Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
             var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
             var d = R * c;
+
+            Console.WriteLine(d);
             return d;
         }
 
@@ -48,6 +50,8 @@ namespace my_first_app.Utils
         {
             return degrees * (Math.PI / 180);
         }
+
+
     }
 
 }
