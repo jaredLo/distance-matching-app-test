@@ -8,6 +8,7 @@ namespace my_first_app.Utils
     {
         private readonly double _range;
 
+        // input is in km
         public ProximityMatchingAlgorithm(double range)
         {
             _range = range;
@@ -26,6 +27,7 @@ namespace my_first_app.Utils
             return matches;
         }
 
+        // Result is in km
         private double DistanceBetweenUsers(User user1, User user2)
         {
             // Using the Haversine formula to calculate the distance between two GPS coordinates
@@ -42,7 +44,6 @@ namespace my_first_app.Utils
             var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
             var d = R * c;
 
-            Console.WriteLine(d);
             return d;
         }
 
